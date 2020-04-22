@@ -12,7 +12,6 @@ var twoSum = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     let item = nums[i];
     if (nums.indexOf(target - item, i + 1) !== -1) {
-      console.log(nums.indexOf(target - item, i + 1));
       return [i, nums.indexOf(target - item, i + 1)];
     }
   }
@@ -50,7 +49,7 @@ var twoSum3 = function(nums, target) {
   // 存储
   for (let i = 0; i < nums.length; i++) {
     let item = nums[i];
-    if (map.has(target - item) &&  map.get(target - item) !== i) {
+    if (map.has(target - item) && map.get(target - item) !== i) {
       return [i, map.get(target - item)];
     }
     map.set(item, i);
