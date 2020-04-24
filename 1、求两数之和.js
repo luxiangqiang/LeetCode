@@ -50,7 +50,7 @@ var twoSum3 = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     let item = nums[i];
     if (map.has(target - item) && map.get(target - item) !== i) {
-      return [i, map.get(target - item)];
+      return [map.get(target - item), i];
     }
     map.set(item, i);
   }

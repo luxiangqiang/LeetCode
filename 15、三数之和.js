@@ -57,6 +57,10 @@ var threeSum = function(nums) {
     // 定义左右指针
     let L = i + 1;
     let R = len - 1;
+    let min = nums[i] + nums[L] + nums[L + 1];
+    if(min > target) continue;
+    let max = nums[i] + nums[R] + nums[R - 1];
+    if(max < target) continue;
     while (L < R) {
       // 结束遍历条件
       let sum = nums[i] + nums[L] + nums[R];
